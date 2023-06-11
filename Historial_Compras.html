@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalles de la Compra</title>
+  <script src="scriptCompras.js"></script>
+</head>
+<body>
+  <h1>Detalles de la Compra</h1>
+
+  <input type="text" id="searchInput" placeholder="Buscar por ID">
+  <button onclick="buscarProducto()">Buscar</button>
+
+  <div id="detallesCompra">
+    <h2>Información de la Compra</h2>
+    <p><strong>ID:</strong> <span id="id"></span></p>
+    <p><strong>Día y Hora:</strong> <span id="fecha"></span></p>
+    <p><strong>Total de Compra:</strong> <span id="total"></span></p>
+    <p><strong>Estado:</strong> <span id="estado"></span></p>
+  </div>
+
+  <div id="articulo">
+    <h2>Artículo</h2>
+    <ul id="listaArticulo">
+    </ul>
+  </div>
+
+  <div id="direccionEnvio">
+    <h2>Dirección de Envío</h2>
+    <p><strong>Origen:</strong> <span id="origen"></span></p>
+    <p><strong>Destino:</strong> <span id="destino"></span></p>
+  </div>
+</body>
+</html>
