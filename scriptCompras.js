@@ -6,7 +6,7 @@ function init() {
   // } else {
   //   window.location.href = '#';
   // }
-  mostrarDetallesCompra(compra[0]);
+  mostrarCompras();
 }
 
 // Datos de ejemplo
@@ -43,13 +43,64 @@ const compra = [
 
 // Función para mostrar los detalles de la compra
 function mostrarDetallesCompra(compra) {
-  document.getElementById("id").textContent = compra.id;
-  document.getElementById("fecha").textContent = compra.fecha;
-  document.getElementById("total").textContent = "$" + compra.total;
-  document.getElementById("estado").textContent = compra.estado;
-  document.getElementById("listaArticulo").textContent = compra.articulo.nombre + " x" + compra.articulo.cantidad;
-  document.getElementById("origen").textContent = compra.direccionEnvio.origen;
-  document.getElementById("destino").textContent = compra.direccionEnvio.destino;
+  const detallesCompraHtml = `
+    <div class="compra-card-item">
+      <div class="detalles-compra">
+        <h2>Información de la Compra</h2>
+        <p><strong>ID:</strong> <span>${compra.id}</span></p>
+        <p><strong>Día y Hora:</strong> <span>${compra.fecha}</span></p>
+        <p><strong>Total de Compra:</strong> <span>$${compra.total}</span></p>
+        <p><strong>Estado:</strong> <span>${compra.estado}</span></p>
+      </div>
+      <div class="articulo">
+        <h2>Artículo</h2>
+        <ul>
+          <li>${compra.articulo.nombre} x${compra.articulo.cantidad}</li>
+        </ul>
+      </div>
+      <div class="direccion-envio">
+        <h2>Dirección de Envío</h2>
+        <p><strong>Origen:</strong> <span>${compra.direccionEnvio.origen}</span></p>
+        <p><strong>Destino:</strong> <span>${compra.direccionEnvio.destino}</span></p>
+      </div>
+    </div>
+  `;
+  
+  const comprasContainer = document.getElementById("comprasContainer");
+  comprasContainer.innerHTML = detallesCompraHtml;
+}
+
+// Función para mostrar todas las compras
+function mostrarCompras() {
+  const comprasContainer = document.getElementById("comprasContainer");
+  comprasContainer.innerHTML = ""; // Vaciar el contenedor antes de agregar las compras
+
+  for (const compraItem of compra) {
+    const detallesCompraHtml = `
+      <div class="compra-card-item">
+        <div class="detalles-compra">
+          <h2>Información de la Compra</h2>
+          <p><strong>ID:</strong> <span>${compraItem.id}</span></p>
+          <p><strong>Día y Hora:</strong> <span>${compraItem.fecha}</span></p>
+          <p><strong>Total de Compra:</strong> <span>$${compraItem.total}</span></p>
+          <p><strong>Estado:</strong> <span>${compraItem.estado}</span></p>
+        </div>
+        <div class="articulo">
+          <h2>Artículo</h2>
+          <ul>
+            <li>${compraItem.articulo.nombre} x${compraItem.articulo.cantidad}</li>
+          </ul>
+        </div>
+        <div class="direccion-envio">
+          <h2>Dirección de Envío</h2>
+          <p><strong>Origen:</strong> <span>${compraItem.direccionEnvio.origen}</span></p>
+          <p><strong>Destino:</strong> <span>${compraItem.direccionEnvio.destino}</span></p>
+        </div>
+      </div>
+    `;
+
+    comprasContainer.innerHTML += detallesCompraHtml; // Agregar el detalle de la compra al contenedor
+  }
 }
 
 // Función para buscar un producto por ID
@@ -63,4 +114,3 @@ function buscarProducto() {
     alert("No se encontró ningún producto con ese ID.");
   }
 }
-
