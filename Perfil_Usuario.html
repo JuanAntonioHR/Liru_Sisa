@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil de usuario</title>
+  <script src="scriptUsuario.js" defer></script>
+</head>
+
+<body>
+  <h1>Información de Usuario</h1>
+
+  <div>
+    <label for="usuario">Usuario:</label>
+    <span id="usuario">1</span>
+  </div>
+
+  <div>
+    <label for="nombre">Nombre(s):</label>
+    <span id="nombre">Pedro</span>
+  </div>
+
+  <div>
+    <label for="apellidos">Apellidos:</label>
+    <span id="apellidos">Ramirez Botello</span>
+  </div>
+
+  <div>
+    <label for="direccion">Dirección:</label>
+    <span id="direccion">Praza de Jesus, 6, 47-B</span>
+  </div>
+
+  <div>
+    <label for="correo">Correo:</label>
+    <input type="text" id="correo" value="example@email.com">
+  </div>
+
+  <div>
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" value="441-204-45-42">
+  </div>
+
+  <div>
+    <label for="cargo">Cargo:</label>
+    <span id="cargo">Administrador</span>
+  </div>
+
+  <div>
+    <label for="sucursal">Sucursal:</label>
+    <span id="sucursal">001</span>
+  </div>
+
+  <button id="actualizar" onclick="actualizarDatos()">Guardar</button>
+
+  <div id="mensaje"></div>
+</body>
+
+</html>
