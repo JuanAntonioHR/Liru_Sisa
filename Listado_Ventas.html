@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+            <section class="main-logo">
+                <img src="img/logo.png">
+            </section>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul class="nav">
+                    <li><a href=>INICIO</a></li>
+                    <li><a href=>VENTAS</a></li>
+                    <li><a href=>REPORTES</a></li>
+                    <li><a href=>HERRAMIENTAS</a></li>
+                    <li><a href=>ADMINISTRACION</a></li>
+                    <li class="menu-icon"><a href="#"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="main-logo">
+            <h1> Artículos</h1>
+        </section>
+        
+        <section class="buscador">
+            <input type="text" id="BuscarPedido" placeholder="Buscar">
+            <button onclick="">Buscar</button><br>
+            
+            <div>
+            <div id="PedidosContainer">       
+            </div>
+        
+        </section>
+
+        <section class="ListadoPedidos">
+
+            <div class="pedido1">
+                <img src="img/peperoni.png" alt="Pizza">
+                <h2>ID: 0000001</h2>
+                <p>Nombre: Peperoni clásica</p>
+                <p>Descripción: Pizza de Peperoni clásica <p>
+                <p>Precio de Venta: $100</p>
+                <p>Precio de Compra: $200</p>
+                <p>Proveedor: Sucursal Avenida de la Luz A</p>
+                <p>Cantidad: 2</p>
+
+                <section class="right-side"> 
+                    <p> Cantidad en inventario: </p>
+
+                    <!-- Ligar al inventario-->
+                    <span id="cantidad-inventario">100</span></p>
+                    <button onclick="actualizarInventario()">Actualizar</button>
+
+                    <script>
+                    function actualizarInventario() {
+                        var nuevaCantidad = 50;
+                        var spanCantidad = document.getElementById("cantidad-inventario");
+                        spanCantidad.textContent = nuevaCantidad;
+                    }
+                    </script>
+                </section>
+
+            </div>
+            <div class="pedido2">
+                <img src="img/hawaina.png" alt="Pizza">
+                <h2>ID: 0000002</h2>
+                <p>Nombre: Hawaiana clásica</p>
+                <div>Descripción: Pizza Hawaiana clásica <p>
+                <p>Precio de Venta: $100</p>
+                <p>Precio de Compra: $100</p>
+                <p>Proveedor: Sucursal Pirineos</p>
+                <p>Cantidad: 1</p>
+                <section class="right-side"> 
+                    <p> Cantidad en inventario: </p>
+
+                    <!-- Ligar al inventario-->
+                    <span id="cantidad-inventario">80</span></p>
+                    <button onclick="actualizarInventario()">Actualizar</button>
+                </section>
+            </div>
+
+        </section>
+
+        
+        <script src="js/scriptVentas.js"></script> 
+
+        
+    </body>
+</html>
