@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Proveedores</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="Menu_Inicio.html">
+                <img src="/img/logo.png" alt="logo">
+            </a>
+        </div>
+        <a href="#">
+          <span class="person-icon material-symbols-rounded">person</span>
+          <div class="info-profile">
+            <p>Empleado1</p>
+            <p>Cuenta ID: <span>0001</span></p>
+          </div>
+        </a>
+        <a href="#" class="link-logout">
+            <span class="logout-icon material-symbols-rounded">logout</span>
+        </a>
+    </header>
+
+    <section class="navbar">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Ventas</a></li>
+            <li class="dropdown">
+              Administración
+              <ul class="dropdown-menu">
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">Ventas</a></li>
+                <li><a href="#">Artículos</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Proveedores</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+
+    <h1>Proveedores</h1>
+    <section>
+
+        <input type="text" id="BuscarProveedor" placeholder="Buscar">
+        <button onclick="">Buscar</button><br>
+        <div>
+            <div id="DetallesProveedor">
+                <h2>Id: </h2>
+                <p><strong>Nombre: </strong></p>
+                <p><strong>Dirección: </strong></p>
+                <p><strong>Correo: </strong></p>
+                <p><strong>Teléfono: </strong></p>
+            </div>
+            <div id="CompraReciente">
+                <h2>Compras recientes</h2>
+                <p>00000000001</p>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+</body>
+</html>

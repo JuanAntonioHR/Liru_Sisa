@@ -1,4 +1,4 @@
-window.onload = init;
+HTwindow.onload = init;
 
 function init() {
   // if(!localStorage.getItem('token')) {
