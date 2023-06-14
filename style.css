@@ -143,7 +143,7 @@ header img {
     margin-right: 0.5em;
 }
 
-/* compras-page */
+/* Compras page */
 
 .compras-card-container {
     padding: 1.7em;
@@ -197,4 +197,69 @@ header img {
 
 .compra-card-item h2 {
     color: var(--cool-orange);
+}
+
+/* Login page */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-blue);
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-card p {
+    color: var(--black);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+  
+.login-card input {
+    padding: 8px 12px;
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-card input:focus {
+    border-color: var(--orange);
+}
+  
+.login-card .Boton-inicio {
+    padding: 10px 20px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.login-card .Boton-inicio:hover {
+    background-color: var(--cool-orange);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--dark-blue);
+    color: var(--white);
 }
