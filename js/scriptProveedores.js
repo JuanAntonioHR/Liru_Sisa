@@ -2,16 +2,20 @@ window.onload=init;
 
 function init()
 {
-    mostrarProveedores();
+    if(localStorage.getItem('token') == 1) {
+        mostrarProveedores();
 
-    const searchInput=document.getElementById("BuscarProveedor");
-    searchInput.addEventListener("keydown",function(event)
-    {
-        if(event.key == "Enter")
+        const searchInput=document.getElementById("BuscarProveedor");
+        searchInput.addEventListener("keydown",function(event)
         {
-            buscarProveedor();
-        }
-    })
+            if(event.key == "Enter")
+            {
+                buscarProveedor();
+            }
+        })
+    } else {
+        window.location.href = 'InicioSesion.html';
+    }
 }
 
 const Proveedor=[
@@ -41,16 +45,18 @@ const Proveedor=[
 function mostrarDetallesProveedor(Proveedor)
 {
     const DetallesProveedor=`
-    <div id="DetallesProveedor">
-        <h2>Id: <span>${Proveedor.id}</span></h2>
-        <p><strong>Nombre: </strong><span>${Proveedor.Nombre}</span></p>
-        <p><strong>Dirección: </strong><span>${Proveedor.Direccion}</span></p>
-        <p><strong>Correo: </strong><span>${Proveedor.Correo}</span></p>
-        <p><strong>Teléfono: </strong><span>${Proveedor.Telefono}<span></p>
-    </div>
-    <div id="CompraReciente">
-        <h2>Compras recientes</h2>
-        <p><span>${Proveedor.CompraReciente.idCompra}</p>
+    <div class="proveedores-card-item">
+        <div id="DetallesProveedor">
+            <h2>Id: <span>${Proveedor.id}</span></h2>
+            <p><strong>Nombre: </strong><span>${Proveedor.Nombre}</span></p>
+            <p><strong>Dirección: </strong><span>${Proveedor.Direccion}</span></p>
+            <p><strong>Correo: </strong><span>${Proveedor.Correo}</span></p>
+            <p><strong>Teléfono: </strong><span>${Proveedor.Telefono}<span></p>
+        </div>
+        <div id="CompraReciente">
+            <h2>Compras recientes</h2>
+            <p><span>${Proveedor.CompraReciente.idCompra}</p>
+        </div>
     </div>`;
     const ProveedorContainer=document.getElementById("ProveedorContainer");
     ProveedorContainer.innerHTML=DetallesProveedor;
@@ -63,16 +69,18 @@ function mostrarProveedores()
     for(const proveedorItem of Proveedor)
     {
         const detelleProveedorHtml=`
-        <div id="DetallesProveedor">
-            <h2>Id: <span>${proveedorItem.id}</span></h2>
-            <p><strong>Nombre: </strong><span>${proveedorItem.Nombre}</span></p>
-            <p><strong>Dirección: </strong><span>${proveedorItem.Direccion}</span></p>
-            <p><strong>Correo: </strong><span>${proveedorItem.Correo}</span></p>
-            <p><strong>Teléfono: </strong><span>${proveedorItem.Telefono}<span></p>
-        </div>
-        <div id="CompraReciente">
-            <h2>Compras recientes</h2>
-            <p><span>${proveedorItem.CompraReciente.idCompra}</p>
+        <div class="proveedores-card-item">
+            <div id="DetallesProveedor">
+                <h2>Id: <span>${proveedorItem.id}</span></h2>
+                <p><strong>Nombre: </strong><span>${proveedorItem.Nombre}</span></p>
+                <p><strong>Dirección: </strong><span>${proveedorItem.Direccion}</span></p>
+                <p><strong>Correo: </strong><span>${proveedorItem.Correo}</span></p>
+                <p><strong>Teléfono: </strong><span>${proveedorItem.Telefono}<span></p>
+            </div>
+            <div id="CompraReciente">
+                <h2>Compras recientes</h2>
+                <p><span>${proveedorItem.CompraReciente.idCompra}</p>
+            </div>
         </div>`;
         ProveedorContainer.innerHTML += detelleProveedorHtml;
     }
