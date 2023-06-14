@@ -1,4 +1,4 @@
-HTwindow.onload = init;
+window.onload = init;
 
 function init() {
   // if(!localStorage.getItem('token')) {
@@ -68,7 +68,7 @@ function mostrarDetallesCompra(compra) {
         </ul>
       </div>
       <div class="direccion-envio">
-        <h2>Dirección de Envío</h2>
+        <h2>Envío</h2>
         <p><strong>Origen:</strong> <span>${compra.direccionEnvio.origen}</span></p>
         <p><strong>Destino:</strong> <span>${compra.direccionEnvio.destino}</span></p>
       </div>
