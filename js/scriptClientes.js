@@ -20,6 +20,11 @@ function init()
     }
 }
 
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'InicioSesion.html';
+}
+
 const venta=[
     {
         id:1,

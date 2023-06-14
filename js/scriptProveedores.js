@@ -18,6 +18,11 @@ function init()
     }
 }
 
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'InicioSesion.html';
+}
+
 const Proveedor=[
     {
         id:1,

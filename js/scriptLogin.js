@@ -5,7 +5,7 @@ document.querySelector('.Boton-inicio').addEventListener('click', function() {
     var usuario = usuarioInput.value;
     var contraseña = contraseñaInput.value;
     
-    if (usuario === '000001' && contraseña === '12345678') {
+    if (usuario === 'Empleado1' && contraseña === '12345678') {
       var token = '1';
       localStorage.setItem('token', token);
       window.location.href = 'Menu_Inicio.html';
