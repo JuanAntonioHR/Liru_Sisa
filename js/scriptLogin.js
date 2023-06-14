@@ -6,7 +6,7 @@ document.querySelector('.Boton-inicio').addEventListener('click', function() {
     var contraseña = contraseñaInput.value;
     
     if (usuario === '000001' && contraseña === '12345678') {
-      var token = 'GENERAR_AQUÍ_UN_TOKEN_ALEATORIO';
+      var token = '1';
       localStorage.setItem('token', token);
       window.location.href = 'Menu_Inicio.html';
     } else {

@@ -30,6 +30,12 @@ header button,
     font-weight: 500;
     font-size: 16px;
     text-decoration: none;
+    background-color: var(--trasparent);
+    border-style: none;
+}
+
+header button {
+    cursor: pointer
 }
 
 header {
@@ -262,4 +268,37 @@ footer {
     padding: 1em;
     background-color: var(--dark-blue);
     color: var(--white);
+}
+
+/* Menu page */
+
+.menu-container {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+  
+.menu-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+  
+.menu-container a:hover {
+    background-color: var(--green);
+}
+  
+.menu-container a .material-symbols-rounded {
+    margin-right: 0.5rem;
+    font-size: 24px;
 }

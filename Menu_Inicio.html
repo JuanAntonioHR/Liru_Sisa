@@ -1,20 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <section class="main-logo">
-    <img src="img/logo.png">
-</section>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liru Sisa Pizza</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+  <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-  <h1>Menu Inicio</h1>
+  <header>
+      <div class="logo">
+          <a href="Menu_Inicio.html">
+              <img src="/img/logo.png" alt="logo">
+          </a>
+      </div>
+      <a class="section-info-profile" href="#">
+        <span class="person-icon material-symbols-rounded">person</span>
+        <div class="info-profile">
+          <p>Empleado1</p>
+          <p>Cuenta ID: <span>0001</span></p>
+        </div>
+      </a>
+      <button class="link-logout" onClick="logout()">
+        <span class="logout-icon material-symbols-rounded">logout</span>
+      </button>
+  </header>
+  <section class="navbar">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="Menu_Inicio.html">
+          <span class="material-symbols-rounded">home</span>
+          Inicio
+        </a></li>
+        <li><a href="Ventas_Productos.html">
+          <span class="material-symbols-rounded">add_shopping_cart</span>
+          Ventas
+        </a></li>
+        <li class="dropdown">
+          <p>
+            <span class="material-symbols-rounded">lab_profile</span>
+            Administración
+            <span class="material-symbols-rounded">arrow_drop_down</span>
+          </p>
+          <div class="dropdown-menu-container">
+            <ul class="dropdown-menu">
+              <li><a href="Historial_Compras.html">Compras</a></li>
+              <li><a href="Listado_Ventas.html">Ventas</a></li>
+              <li><a href="Listado_Articulos.html">Artículos</a></li>
+              <li><a href="Listado_clientes.html">Clientes</a></li>
+              <li><a href="Listado_Proveedores.html">Proveedores</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </section>
 
-  <button onclick="window.location.href=''" id="botonMenu">Ventas</button>
-  <button onclick="window.location.href=''" id="botonMenu">Consultar ventas</button>
-  <button onclick="window.location.href=''" id="botonMenu">Reportar compra</button>
-  <button onclick="window.location.href=''" id="botonMenu">Consultar compra</button>
-  <button onclick="window.location.href=''" id="botonMenu">Empleados</button>
-  <button onclick="window.location.href=''" id="botonMenu">Proveedores</button>
-  <button onclick="window.location.href=''" id="botonMenu">Clientes</button>
-  <button onclick="window.location.href=''" id="botonMenu">Articulos</button>
+  <div class="menu-container">
+    <a href="Ventas_Productos.html">Ventas</a>
+    <a href="Listado_Ventas.html">Consultar ventas</a>
+    <a href="#">Reportar compras</a>
+    <a href="Historial_Compras.html">Consultar compras</a>
+    <a href="#">Empleados</a>
+    <a href="Listado_Proveedores.html">Proveedores</a>
+    <a href="Listado_clientes.html">Clientes</a>
+    <a href="Listado_Articulos.html">Articulos</a>
+  </div>
 </body>
+<script src="js/scriptMenu.js"></script>
 </html>

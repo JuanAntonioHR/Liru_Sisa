@@ -1,21 +1,24 @@
 window.onload = init;
 
 function init() {
-  // if(!localStorage.getItem('token')) {
-  //   mostrarDetallesCompra(1);
-  // } else {
-  //   window.location.href = '#';
-  // }
+  if(localStorage.getItem('token') == 1) {
+    mostrarCompras();
+  
+    // Agregar evento keydown al campo de entrada searchInput
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        buscarProducto();
+      }
+    });
+  } else {
+    window.location.href = 'InicioSesion.html';
+  }
+}
 
-  mostrarCompras();
-
-  // Agregar evento keydown al campo de entrada searchInput
-  const searchInput = document.getElementById("searchInput");
-  searchInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-      buscarProducto();
-    }
-  });
+function logout() {
+  localStorage.removeItem('token');
+  window.location.href = 'InicioSesion.html';
 }
 
 // Datos de ejemplo
