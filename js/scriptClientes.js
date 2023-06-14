@@ -3,16 +3,21 @@ window.onload=init;
 
 function init()
 {
-    mostrarClientes();
+    if(localStorage.getItem('token') == 1) {
+        mostrarClientes();
 
-    const searchInput=document.getElementById("BuscarCliente");
-    searchInput.addEventListener("keydown",function(event)
-    {
-        if(event.key =="Enter")
+        const searchInput=document.getElementById("BuscarCliente");
+        searchInput.addEventListener("keydown",function(event)
         {
-            buscarCliente();
-        }
-    });
+            if(event.key =="Enter")
+            {
+                buscarCliente();
+            }
+        });
+        
+    } else {
+        window.location.href = 'InicioSesion.html';
+    }
 }
 
 const venta=[
@@ -44,17 +49,19 @@ const venta=[
 function mostrarDetallesVenta(venta)
 {
     const detallesVentaHtml=`
-    <div id="DetalleClientes">
-        <h2>Id: <span>${venta.id}</span></h2>
-        <p><strong>Nombre: </strong><span>${venta.Nombre}</span></p>
-        <p><strong>Apellido: </strong><span>${venta.Apellido}</span></p>
-        <p><strong>Dirección: </strong><span>${venta.Direccion}</span></p>
-        <p><strong>Correo: </strong><span>${venta.Correo}</span></p>
-        <p><strong>Teléfono: </strong><span>${venta.Telefono}</span></p>
-    </div>
-    <div id="VentaReciente">
-        <h2>Ventas recientes</h2>
-        <p><span>${venta.VentaReciente.idV}</span></p>
+    <div class="clientes-card-item">
+        <div id="DetalleClientes">
+            <h2>Id: <span>${venta.id}</span></h2>
+            <p><strong>Nombre: </strong><span>${venta.Nombre}</span></p>
+            <p><strong>Apellido: </strong><span>${venta.Apellido}</span></p>
+            <p><strong>Dirección: </strong><span>${venta.Direccion}</span></p>
+            <p><strong>Correo: </strong><span>${venta.Correo}</span></p>
+            <p><strong>Teléfono: </strong><span>${venta.Telefono}</span></p>
+        </div>
+        <div id="VentaReciente">
+            <h2>Ventas recientes</h2>
+            <p><span>${venta.VentaReciente.idV}</span></p>
+        </div>
     </div>`;
     const ventasContainer=document.getElementById("ClientesContainer");
     ventasContainer.innerHTML=detallesVentaHtml;
@@ -68,17 +75,19 @@ function mostrarClientes()
     for(const clienteItem of venta)
     {
         const detalleClienteHtml=`
-        <div id="DetalleClientes">
-            <h2>Id:<br> <span>${clienteItem.id}</span></h2>
-            <p><strong>Nombre: </strong><span>${clienteItem.Nombre}</span></p>
-            <p><strong>Apellido: </strong><span>${clienteItem.Apellido}</span></p>
-            <p><strong>Dirección: </strong><span>${clienteItem.Direccion}</span></p>
-            <p><strong>Correo: </strong><span>${clienteItem.Correo}</span></p>
-            <p><strong>Teléfono: </strong><span>${clienteItem.Telefono}</span></p>
-         </div>
-        <div id="VentaReciente">
-            <h2>Ventas recientes</h2>
-            <p><span>${clienteItem.VentaReciente.idV}</span></p>
+        <div class="clientes-card-item">
+            <div id="DetalleClientes">
+                <h2>Id: <span>${clienteItem.id}</span></h2>
+                <p><strong>Nombre: </strong><span>${clienteItem.Nombre}</span></p>
+                <p><strong>Apellido: </strong><span>${clienteItem.Apellido}</span></p>
+                <p><strong>Dirección: </strong><span>${clienteItem.Direccion}</span></p>
+                <p><strong>Correo: </strong><span>${clienteItem.Correo}</span></p>
+                <p><strong>Teléfono: </strong><span>${clienteItem.Telefono}</span></p>
+            </div>
+            <div id="VentaReciente">
+                <h2>Ventas recientes</h2>
+                <p><span>${clienteItem.VentaReciente.idV}</span></p>
+            </div>
         </div>`;
         ventasContainer.innerHTML += detalleClienteHtml;
     }
