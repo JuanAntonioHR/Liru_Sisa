@@ -16,6 +16,7 @@ function init()
     } else {
         window.location.href = 'InicioSesion.html';
     }
+
 }
 
 function logout() {
