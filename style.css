@@ -346,3 +346,30 @@ footer {
 .clientes-card-item h2 {
     color: var(--cool-orange);
 }
+
+/* Ventas page */
+
+.ventas-card-container {
+    padding: 1.7em;
+    background-color: var(--gray);
+}
+
+.ventas-card {
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.ventas-card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: var(--white);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ventas-card-item h2 {
+    color: var(--cool-orange);
+}
