@@ -61,59 +61,86 @@
     <span class="shopping-cart-icon material-symbols-rounded">person</span>
     <h1>Mi perfil</h1>
   </div>
-
-<body>
-  <div>
-    <label for="usuario">Usuario:</label>
-    <span id="usuario">1</span>
+ 
+  <div class="perfil-card-container">
+    <div class="datos-personales-card">
+      <h2>Datos personales</h2>
+      <div class="info-datos-personales">
+        <div class="profile-pic-box">
+          <img src="/img/user_profile.png" alt="profile-pic">
+        </div>
+        <div class="info-box">
+          <div class="info-box-item">
+            <p>Usuario:</p>
+            <div class="non-editable-info">
+              <span class="icon material-symbols-rounded">account_circle</span>
+              <p>0001</p>
+            </div>
+          </div>
+        
+          <div class="info-box-item">
+            <p>Nombre(s):</p>
+            <div class="non-editable-info">
+              <span class="icon material-symbols-rounded">badge</span>
+              <p>Pedro</p>
+            </div>
+          </div>
+        
+          <div class="info-box-item">
+            <p>Apellidos:</p>
+            <div class="non-editable-info">
+              <span class="icon material-symbols-rounded">badge</span>
+              <p>Ramirez Botello</p>
+            </div>
+          </div>
+        
+          <div class="info-box-item">
+            <p>Dirección:</p>
+            <div class="non-editable-info">
+              <span class="icon material-symbols-rounded">pin_drop</span>
+              <p>Praza de Jesus, 6, 47-B</p>
+            </div>
+          </div>
+        
+          <div class="info-box-item">
+            <p>Correo:</p>
+            <input type="email" id="correo" value="example@email.com">
+          </div>
+        
+          <div class="info-box-item">
+            <p>Teléfono:</p>
+            <input type="text" id="telefono" value="441-204-45-42">
+          </div>
+        
+          <div class="info-box-item">
+            <p>Cargo:</p>
+            <div class="non-editable-info">
+              <span class="icon material-symbols-rounded">manage_accounts</span>
+              <p>Administrador</p>
+            </div>
+          </div>
+        
+          <div class="info-box-item">
+            <p>Sucursal:</p>
+            <div class="non-editable-info">
+              <span class="icon material-symbols-rounded">store</span>
+              <p>001</p>
+            </div>
+          </div>
+        
+          <button id="actualizar" onclick="actualizarDatos()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="perfil-ventas-card">
+      <h2>Ventas</h2>
+      <div id="ventaContainer" class="perfil-ventas-card-container">
+        
+      </div>
+    </div>
   </div>
-
-  <div>
-    <label for="nombre">Nombre(s):</label>
-    <span id="nombre">Pedro</span>
-  </div>
-
-  <div>
-    <label for="apellidos">Apellidos:</label>
-    <span id="apellidos">Ramirez Botello</span>
-  </div>
-
-  <div>
-    <label for="direccion">Dirección:</label>
-    <span id="direccion">Praza de Jesus, 6, 47-B</span>
-  </div>
-
-  <div>
-    <label for="correo">Correo:</label>
-    <input type="text" id="correo" value="example@email.com">
-  </div>
-
-  <div>
-    <label for="telefono">Teléfono:</label>
-    <input type="text" id="telefono" value="441-204-45-42">
-  </div>
-
-  <div>
-    <label for="cargo">Cargo:</label>
-    <span id="cargo">Administrador</span>
-  </div>
-
-  <div>
-    <label for="sucursal">Sucursal:</label>
-    <span id="sucursal">001</span>
-  </div>
-
-  <button id="actualizar" onclick="actualizarDatos()">Guardar</button>
-
-  <div id="mensaje"></div>
-
-  <h1>Ventas</h1>
-    <section class="ventas-card-container">
-    <div id="ventaContainer" class="ventas-card"> </div>
-  </section>
-
-  <script src="scriptUsuario.js"></script>
 
 </body>
-
+<script src="scriptUsuario.js"></script>
 </html>
