@@ -4,6 +4,7 @@ function init()
 {
     if(localStorage.getItem('token') == 1) {
         MostrarVentas();
+        verificarVentas();
 
         const searchInput=document.getElementById("BuscarVenta");
         searchInput.addEventListener("keydown",function(event)
@@ -59,6 +60,28 @@ const Venta=[
     }
     
 ]
+
+function verificarVentas() {
+    // Verificar si hay ventas guardadas en el localStorage
+    const ventasGuardadas = localStorage.getItem('ventas');
+    
+    if (ventasGuardadas) {
+        try {
+            // Intentar parsear el contenido del localStorage como un array de objetos
+            const ventasArray = JSON.parse(ventasGuardadas);
+            
+            // Verificar si el parseo fue exitoso y el resultado es un array
+            if (Array.isArray(ventasArray)) {
+                // Agregar las ventas guardadas al array Venta
+                Venta.push(...ventasArray);
+            }
+        } catch (error) {
+            console.error('Error al parsear las ventas guardadas en el localStorage:', error);
+        }
+    }
+}
+
+
 
 //Mostrar detalles de los artículos
 function MostrarDetallesVenta(Venta)

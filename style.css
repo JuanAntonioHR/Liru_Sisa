@@ -640,3 +640,24 @@ footer {
     transition: background-color 0.3s ease;
     background-color: var(--orange);
 }
+
+.search-container-client {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.boton-buscar {
+    cursor: pointer;
+    margin-left: calc(1em * 0.5);
+    padding: calc(1em * 0.5);
+    border-style: solid;
+    border-radius: 50%;
+    color: var(--white);
+    background-color: var(--white);
+}
+
+.boton-buscar:hover {
+    transition: background-color 0.3s ease;
+    background-color: var(--gray);
+}

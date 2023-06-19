@@ -59,47 +59,43 @@
         </nav>
     </section>
 
-    <div class="nice-title">
-        <span class="shopping-cart-icon material-symbols-rounded">add_shopping_cart</span>
-        <h1>Articulos</h1>
-    </div>
-
     <main class="main-card-container">
         <div class="search-container">
-            <input type="text" id="BuscarCliente" class="searchInput" placeholder="🔎 Buscar">
-            <p><b>Cliente:</b> Pancracio López</p>
+            <input type="text" id="BuscarArticulo" class="searchInput" placeholder="🔎 Buscar">
+            <button class="boton-buscar" onclick="buscarArticulo()">🔎</button>
+            <p><b>Cliente: </b><span id="cliente"></span></p>
         </div>
         
         <div class="datos-contenedor">
             <div class="contenedor-monto-pagar">
                 <div class="card-monto-pagar">
                     <p>Monto a pagar</p>
-                    <h1 id="monto-total">$10,000.00</h1>
+                    <h1 id="monto-total">$0.00</h1>
                     <input id="Input-pagar" type="number">
                     <h5>Crédito</h5>
                     <p>Deuda</p>
-                    <h1 id="credito">$10,000.00</h1>
+                    <h1 id="deuda">$0.00</h1>
     
                     <table class="table-info-venta">
                         <tr>
-                            <th><b>Gameplanet 001</b></th>
+                            <th><b>Liru Sisa 001</b></th>
                             <th></th>
                         </tr>
                         <tr>
                             <td>Cliente:</td>
-                            <td id="cliente">Pancreacio López</td>
+                            <td id="cliente-ticket"></td>
                         </tr>
                         <tr>
                             <td>Total a pagar:</td>
-                            <td id="total-pago">$10,000.00</td>
+                            <td id="total-pago">$0.00</td>
                         </tr>
                         <tr>
                             <td>Deuda:</td>
-                            <td id="deuda">$10,000.00</td>
+                            <td id="deuda-ticket">$0.00</td>
                         </tr>
                         <tr>
                             <td>Saldo:</td>
-                            <td id="saldo">$35,487.98</td>
+                            <td id="saldo">$0.00</td>
                         </tr>
                         <tr>
                             <td>Fecha:</td>
@@ -113,34 +109,19 @@
                 </div>
 
                 <div class="botones-section">
-                    <button id="boton-suma"><span class="material-symbols-rounded">add_circle</span></button>
+                    <button id="boton-suma" onclick="verificarVenta()"><span class="material-symbols-rounded">add_circle</span></button>
                     <button id="boton-bote-eliminar"><span class="material-symbols-rounded">delete</span></button>
                     <button id="boton-eliminar"><span class="material-symbols-rounded">remove</span></button>
                 </div>
             </div>
 
             <div class="contenedor-ventas">
-                <table class="table-items">
+                <table id="tabla-articulos" class="table-items">
                     <tr>
-                        <th></th>
                         <th><b>Nombre</b></th>
                         <th><b>Cantidad</b></th>
                         <th><b>Precio</b></th>
                         <th><b>Importe</b></th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Pizza de peperoni Grande</td>
-                        <td>1</td>
-                        <td>$6,000.00</td>
-                        <td>$6,000.00</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Pizza de peperoni Mediana</td>
-                        <td>1</td>
-                        <td>$4,000.00</td>
-                        <td>$4,000.00</td>
                     </tr>
                 </table>
 
@@ -157,24 +138,19 @@
                 <div class="contenedor-clientes">
                     <div class="search-container">
                         <input type="text" id="BuscarCliente" class="searchInput" placeholder="🔎 Buscar">
+                        <button class="boton-buscar" onclick="buscarCliente()">🔎</button>
                         <div class="search-container-client">
-                            <span></span>
+                            <span class="material-symbols-rounded">person</span>
                             <p><b>Clientes</b></p>
                         </div>
                     </div>
 
-                    <table class="table-clientes">
+                    <table id="tabla-clientes" class="table-clientes">
                         <tr>
                             <th><b>Nombre</b></th>
                             <th><b>Email</b></th>
                             <th><b>Teléfono</b></th>
                             <th><b>Saldo</b></th>
-                        </tr>
-                        <tr>
-                            <td id="table-cliente">Pancracio Lopéz</td>
-                            <td id="table-correo">pancracio@email.com</td>
-                            <td id="table-numero">442-138-68-82</td>
-                            <td id="table-saldo">$35,487.98</td>
                         </tr>
                     </table>
                 </div>
@@ -182,4 +158,6 @@
         </div>
     </main>
 </body>
+
+<script src="js/Ventas_Productos.js"></script>
 </html>
