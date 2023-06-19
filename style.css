@@ -378,6 +378,37 @@ footer {
     color: var(--cool-orange);
 }
 
+/* Articulos page */
+
+.articulos-card-container {
+    padding: 1.7em;
+    background-color: var(--gray);
+}
+
+.articulos-card {
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.articulos-card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: var(--white);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+#cantidad-inventario {
+    color: var(--orange);
+}
+
+#cantidad-inventario span {
+    color: var(--black);
+}
+
 /* Perfil page */
 
 .perfil-card-container {
