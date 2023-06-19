@@ -78,7 +78,8 @@ header {
 }
 
 header img {
-    height: 30px;
+    height: 100x;
+    width: 100px;
 }
 
 .nav-links {
@@ -262,6 +263,11 @@ footer {
     padding: 1em;
     background-color: var(--dark-blue);
     color: var(--white);
+}
+
+.Contenedor-main-logo{
+    height: 75%;
+    width: 75%;
 }
 
 /* Menu page */
