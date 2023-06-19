@@ -10,6 +10,7 @@
     --cool-orange: #FA8900;
     --nice-green: rgba(0, 169, 136, 1);
     --red: #FF0003;
+    --cool-red: #ff3b1d;
     --yellow: #FFCD02;
     --cool-yellow: #fdd700;
     --green: #14BB25;
@@ -481,3 +482,124 @@ footer {
 
 /* Ventas-deadevis page */
 
+.main-card-container {
+    padding: 1.5em;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+ .search-container .searchInput {
+    width: 70%;
+    margin-bottom: 0;
+}
+
+.search-container p {
+    margin-left: 2em;
+}
+
+.datos-contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-monto-pagar {
+    padding: 1em;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 30%;
+}
+
+.card-monto-pagar input {
+    font-size: medium;
+    width: 90%;
+    margin: 1em;
+    margin-bottom: calc(1em * 0.7);
+    padding: calc(1em * 0.5);
+    border-style: solid;
+    border-color: var(--gray);
+}
+
+.card-monto-pagar h5 {
+    margin-bottom: 1em;
+}
+
+.table-info-venta {
+    margin: 1em 0;
+    width: 100%;
+}
+
+.botones-section {
+    text-align: center;
+}
+
+.botones-section button,
+.pages button {
+    cursor: pointer;
+    margin: 1em 0;
+    padding: calc(1em * 0.5) 2.5em;
+    align-items: center;
+    border-style: none;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+#boton-suma {
+    background-color: var(--cool-orange);
+}
+
+#boton-suma:hover {
+    transition: background-color 0.3s ease;
+    background-color: var(--orange);
+}
+
+#boton-bote-eliminar,
+#boton-eliminar {
+    background-color: var(--cool-red);
+}
+
+#boton-bote-eliminar:hover,
+#boton-eliminar:hover {
+    transition: background-color 0.3s ease;
+    background-color: var(--red);
+}
+
+.contenedor-ventas {
+    padding: 1em 2em;
+    width: 70%;
+}
+
+.contenedor-ventas table,
+.contenedor-clientes{
+    padding: 1em;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.contenedor-ventas table th,
+.contenedor-ventas table td {
+    border: 1px solid var(--gray);
+}
+
+.pages {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.Boton-ventas {
+    margin: 1em 0;
+    padding: calc(1em * 0.5) 2.5em;
+    color: var(--white);
+    background-color: var(--cool-orange);
+}
+
+.Boton-ventas:hover {
+    transition: background-color 0.3s ease;
+    background-color: var(--orange);
+}
